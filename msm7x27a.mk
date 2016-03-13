@@ -234,4 +234,8 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
 PRODUCT_PROPERTY_OVERRIDES += \
    persist.sys.root_access=3
 
+# Prebuilt toybox
+PRODUCT_COPY_FILES += \
+    device/huawei/msm7x27a-common/prebuilt/toybox:system/bin/toybox
+
 $(call inherit-product, vendor/huawei/msm7x27a-common/msm7x27a-common-vendor.mk)
