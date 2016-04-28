@@ -1,4 +1,4 @@
-From 3ba85408b9c1311103a8a6ba3d992297b86f85a4 Mon Sep 17 00:00:00 2001
+From 339468caae52b0aa0ce802e89e2da35cd077a642 Mon Sep 17 00:00:00 2001
 From: Kyle Harrison <khwebmail@gmail.com>
 Date: Fri, 13 Feb 2015 20:16:18 +0000
 Subject: [PATCH] Select texture target based on pixel format
@@ -58,11 +58,11 @@ index 76aec6e..40d77ac 100644
  
  ifeq (,$(ONE_SHOT_MAKEFILE))
 diff --git a/services/surfaceflinger/Android.mk b/services/surfaceflinger/Android.mk
-index c921329..06daf13 100644
+index 6a90083..a1d9b65 100644
 --- a/services/surfaceflinger/Android.mk
 +++ b/services/surfaceflinger/Android.mk
-@@ -90,6 +90,10 @@ else
-     LOCAL_CFLAGS += -DMAX_VIRTUAL_DISPLAY_DIMENSION=0
+@@ -99,6 +99,10 @@ ifeq ($(BOARD_USE_BGRA_8888),true)
+     LOCAL_CFLAGS += -DUSE_BGRA_8888
  endif
  
 +ifeq ($(BOARD_ADRENO_DECIDE_TEXTURE_TARGET),true)
@@ -197,5 +197,5 @@ index 779e5b7..6394aae 100644
      // See GLConsumer::bindTextureImageLocked().
      status_t bindTextureImage();
 -- 
-2.6.4
+2.8.0
 
