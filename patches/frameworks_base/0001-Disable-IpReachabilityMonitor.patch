@@ -1,0 +1,25 @@
+From 3e5aa008fdd3d8d140ea4b295a04c3638824d58e Mon Sep 17 00:00:00 2001
+From: Oliver <olt78@web.de>
+Date: Sun, 26 Jun 2016 00:18:59 +0200
+Subject: [PATCH] Disable IpReachabilityMonitor
+
+---
+ core/res/res/values/config.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/core/res/res/values/config.xml b/core/res/res/values/config.xml
+index 6bf9383..b40c260 100644
+--- a/core/res/res/values/config.xml
++++ b/core/res/res/values/config.xml
+@@ -2494,7 +2494,7 @@
+    <!-- Configuration to play sms ringtone during MO/MT call -->
+    <bool name="config_sms_ringtone_incall">false</bool>
+     <!-- IpReachability monitor enable/Disable -->
+-    <bool translatable="false" name="config_wifi_ipreachability_monitor">true</bool>
++    <bool translatable="false" name="config_wifi_ipreachability_monitor">false</bool>
+ 
+     <!-- Configuration that determines if ACTIVATE_REJECT_GGSN is to be treated as
+          a permanent error -->
+-- 
+2.7.4
+
